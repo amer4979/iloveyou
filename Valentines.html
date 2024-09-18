@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Happy Valentines My Love</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preload" as="font" href="https://fonts.cdnfonts.com/css/comica-bd">
+<style>
+@import url('https://fonts.cdnfonts.com/css/monaco');
+@import url('https://fonts.cdnfonts.com/css/comica-bd');
+
+html,body {font-family:"Monaco", sans-serif; margin: 0%;}
+h1,h2,h3,h4,h5,h6 {font-family: 'Comica BD', sans-serif;}
+p {text-align: center; }
+
+.tb {
+  text-align: left;
+  font-size:x-small;
+  padding-left: 10%;
+  /* width: fit-content; */
+}
+
+.teb {
+  text-align: left;
+  font-size: x-small;
+  padding-left: 10%;
+  /* width: fit-content; */
+  
+}
+
+.tab {
+  font-size: 25pt;
+  padding: 10%;
+  width: fit-content;
+  font-family: 'brush script mt', cursive;
+  text-align: center;
+}
+
+div { cursor: pointer; }
+
+.header-image {background-image: url("https://i.ibb.co/8rJCqQ5/vtines2.png"); height: 300px;
+  background-position: center; background-repeat: no-repeat; background-size: contain; position: relative;background-color: crimson;}
+.header-text {text-align: left; position: absolute; top:50%; left: 5%; color: white;}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
+}
+
+.content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: white;
+  padding: 1%;
+  /* z-index: 1; */
+  
+}
+
+.content2 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: crimson;
+  
+}
+
+.content3 {
+  align-content: center;
+  justify-content: center;
+  /* display: inline-block; */
+  text-align: center;
+}
+.animation-text {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: calc(1rem + 3vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  color: transparent;
+  
+  background-clip: text;
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 210px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.item-1:checked .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: crimson;
+  color: whitesmoke;
+  text-align: center;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #ee6352;
+  color: white;
+  transform: rotateY(180deg);
+  width:100%;
+}
+
+.button-letter {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-image: url('https://cliply.co/wp-content/uploads/2020/01/402001120_PAPER_HEARTS_400px.gif');
+  background-size:cover;
+  background-position-y: 73%;
+  /* box-shadow: 0px -2px 50px black; */
+  /* border: 1px solid crimson; */
+}
+
+.button-letter p {
+  color:whitesmoke;
+  text-align: center;
+  font-size: 9pt;
+  background-color: #ee6352;
+  padding: 5%;
+
+}
+
+/* @keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+} */
+
+/* The Modal (background) */
+
+
+/* Modal Content/Box */
+/* .popup-letter {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size 
+}
+
+#myBtn {
+  text-align: center;
+  top: -50%;
+  padding: 1%;
+  width: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 5%;
+}
+/* The Close Button 
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} */
+
+.toggle-el {
+  padding: 2rem;
+  height:max-content;
+  background: white;
+  transition: all 0.2s ease;
+  opacity: 1;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+input[type=checkbox].hide-input:checked + .toggle-el {
+  height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+input.hide-input {
+  position: absolute;
+  left: -999em;
+}
+
+label.toggle {
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  color: whitesmoke;
+  background: crimson;
+  border-radius: 5px;
+  user-select: none;
+}
+
+
+
+</style>
+<head>
+</head>
+<body>
+<div class="header-image">
+    <div class="header-text">
+        <h1>Dear Rob,</h1>
+        <h2>Happy Valentines Day Love!</h2>
+    </div>
+</div>
+
+
+<!-- <div class="content">
+    <div class="animation-text">I love you<br></div>
+</div> -->
+
+<div class="button-letter">
+  <img  src="https://thumbs.dreamstime.com/b/cute-animal-cartoon-panda-mail-love-vector-illustration-144341045.jpg" width="30%" height="30%">
+<br>
+<label for="item-3" class="toggle">Read me</label>
+<input type="checkbox" name="one" id="item-3" class="hide-input" checked>
+<div class="toggle-el">
+  <div>
+    <p>
+      This is my first time writing code for valentines &#128517. I hope you were able to read it and it looked okay from your phone &#128556 <br><br>
+      I would write alot of things in this letter, but I know that no amount of words can explain how I feel about you. So I will cut to the main points hehe &#129303. <br><br>
+    
+      Rob, I am truly grateful and equally blessed that I am with you - the man of my dreams, the man I longed for, the man God meant for me &#128591
+      I wish I could be with you physically, but this static webpage is my best attempt to show you that I care for you, even from a distance.
+      From the little things you do to the biggest things you could give me, know that I am so thankful &#129402. 
+      I only wish that I am giving you the same amount of love you have shown me, and I pray to God that I can give you more that you so deserve &#129392
+      I will always be here for you, I will love you through the ups and downs and I will cherish our growth from this day forth &#128536 <br><br>
+
+      As God is our witness, I will always love you, cherish you, provide for you, nurture you, adore you, keep you safe and most importantly, pray for you. <br><br>
+      
+      With all my love, <br>
+      Your Panda Angel &#128060
+    </p>
+
+  </div>
+</div>
+</div>
+
+<div class="content">
+  <div class="animation-text">&#x1F497 &#x1F497 &#x1F497 &#x1F497 &#x1F497 </div>
+</div>
+<!-- <div class="content">
+  <div class="animation-text">I love you<br></div>
+</div> -->
+
+<div class="content2">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <label for="item-1" class>
+        <p class="tab">I &hearts; You because ...</p>
+        </label>
+        <input type="checkbox" id="item-1" class="item-1"/>
+      </div>
+      <div class="flip-card-back">
+        <ul class="teb">
+          <li>you always seek God &#128519</li>
+          <li>you got me closer to God &#128538</li>
+          <li>you value family time &#129392</li>
+          <li>you chose me to be in your life &#129319</li>
+          <li>you have &#128076 personality</li>
+          <li>you are so hot ugh I am so lucky you're mine &#129397 </li>
+          <li>you respect the hustle &#128170 </li>
+          <li>you listen to me sometimes? &#128514</li>
+          <li>you embrace me and my flaws &#129310 </li>
+          <li>Baby cant you see? You complete me &#127925</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <label for="item-1" class>
+        <p class="tab">I thank God for ...</p>
+        </label>
+        <input type="checkbox" id="item-1" class="item-1"/>
+      </div>
+      <div class="flip-card-back">
+        <ul class="tb">
+          <li>always keeping you safe &#128591 </li>
+          <li>being there through thick and thin &#10013 </li>
+          <li>healing you from your past &#x1F90D</li>
+          <li>the strength He gives you to deal with me &#129315 </li>
+          <li>the soulmate I prayed for &#x1F491 </li>
+          <li>protecting and guilding your loved ones &#x1F49F</li>
+          <li>literally everything: the good, the bad, all he's done to us, for us, with us. He did it because He loves us. &#x1F90D </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content2">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <label for="item-1" class>
+        <p class="tab">I am sorry for ...</p>
+        </label>
+        <input type="checkbox" id="item-1" class="item-1"/>
+      </div>
+      <div class="flip-card-back">
+        <ul class="tb">
+          <li>being a stubborn panda even though I am right 99.99% of the time &#128548 </li>
+          <li>rolling my eyes 360&#176 at you &#128580</li>
+          <li>sleeping right after saying I was gonna stay awake &#129317</li>
+          <li>eating chocolates/ snacks even when you say I shouldn't &#129325 </li>
+          <li>teasing you to the point where it backfires on me &#128557 </li>
+          <li>mumbling nonsense cause I was half asleep &#128564 </li>
+          <li>loving you too much (NOT SORRY AT ALL) &#129322</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <label for="item-1" class>
+        <p class="tab">I pray for ...</p>
+        </label>
+        <input type="checkbox" id="item-1" class="item-1"/>
+      </div>
+      <div class="flip-card-back">
+        <ul class="tb">
+          <li>God's blessings and continuous protection over you &#128522</li>
+          <li>wisdom, strength and courage to be bestowed upon you &#128588</li>
+          <li>more abundance in your future and your dreams to come true &#127775</li>
+          <li>God's guidance upon us and our ever growing love  &#x1F48F</li>
+          <li>all your fears, hardships and challenges to disappear &#x2714 </li>
+          <li>your happiness in whatever you do and wherever you go &#x1F496</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content">
+  <div class="animation-text">&#x1F497 &#x1F497 &#x1F497 &#x1F497 &#x1F497 </div>
+</div>
+
+</body>
+</html>
